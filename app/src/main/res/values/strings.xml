@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wheelz</string>
+    <string name="email_name">Wheelz Pro</string>
+    <string name="help">CONTROLS:\n\tBar+joyStick:\n\tUse the bar on the left to accelerate/brake\n\tThe joystick on the right to lean, and Flip/center button to turn around\nJoystick/D-Pad:\n\tPush up to accelerate, down to brake/reverse\n\tleft and right tilt, Press the Flip/center button to turn around\nCUSTOM LEVELS:\n\tPlease put custom levels in /sdcard/xlvls/\n\tnew levels can be made with inksmoto - the level editor for xMoto\n\tThe levels in the xMoto pack are from the game xMoto - and are licenced under the GPL</string>
+    <string name="email">E-Mail me!</string>
+    <string name="credits">Made by Chozabu@gmail.com - Alex P-B.\n\nUsing andengine.\n-Uses Box2d for physics.\n-OpenGL for graphics.\nHandy info from all over the internet :)\nThe levels in the xMoto pack are from the game xMoto - and are licenced under the GPL</string>
+</resources>

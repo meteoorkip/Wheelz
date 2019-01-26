@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Game Settings">
+        <PreferenceScreen
+            android:key="graphicsSound"
+            android:title="Graphics 'n' sound"
+            android:summary="Both for taste, and performnce">
+
+            <CheckBoxPreference
+                android:title="Extra FX"
+                android:defaultValue="true"
+                android:summary="Mud spray, skid and impact sounds (slows phone)"
+                android:key="hitSoundOn" />
+            <!-- <PreferenceCategory android:title="Graphics"> -->
+            <CheckBoxPreference
+                android:title="Retro Mode"
+                android:defaultValue="false"
+                android:summary="disable Poly textures - to run smoother"
+                android:key="uglyMode" />
+            <!-- </PreferenceCategory>
+            <PreferenceCategory android:title="Sound"> -->
+            <CheckBoxPreference
+                android:title="Engine FX"
+                android:defaultValue="true"
+                android:summary="toggle engine sounds"
+                android:key="soundOn" />
+            <!-- </PreferenceCategory> -->
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="controlsScreen"
+            android:title="Controls"
+            android:summary="Avoid Sticking buttons - customise">
+            <ListPreference
+                android:title="Acceleration Controls"
+                android:summary="How to Accelerate and Brake"
+                android:key="ABControls"
+                android:defaultValue="Buttons"
+                android:entries="@array/driveNames"
+                android:entryValues="@array/driveVals" />
+            <ListPreference
+                android:title="Lean Controls"
+                android:summary="How to lean"
+                android:key="LRControls"
+                android:defaultValue="Buttons"
+                android:entries="@array/leanNames"
+                android:entryValues="@array/leanVals" />
+            <CheckBoxPreference
+                android:title="Flip Button on Right"
+                android:defaultValue="false"
+                android:summary="put flip button above lean buttons'"
+                android:key="controlsOnRight" />
+            <ListPreference
+                android:title="Tilt Sensitivity"
+                android:summary="How sensitive accelerometer is"
+                android:key="tiltSensitivity"
+                android:defaultValue="2"
+                android:entries="@array/heightNames5"
+                android:entryValues="@array/base1vals5" />
+            <ListPreference
+                android:title="Tilt DeadZone"
+                android:summary="Accelerometer DeadZone"
+                android:key="tiltDeadZone"
+                android:defaultValue="2"
+                android:entries="@array/sizeNames5"
+                android:entryValues="@array/base1vals5" />
+            <CheckBoxPreference
+                android:title="Rotate camera with bike"
+                android:defaultValue="false"
+                android:summary="BETA - Requires 'Tilt to lean'"
+                android:key="camRotOn" />
+            <CheckBoxPreference
+                android:title="Zoom Camera with Speed"
+                android:defaultValue="false"
+                android:summary="BETA - zoom in when slow, out when fast."
+                android:key="camZoomOn" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="modScreen"
+            android:title="Customise truck"
+            android:summary="Modify Wheel size, suspension stiffness, etc">
+            <ListPreference
+                android:title="Suspension Offset"
+                android:summary="How High your suspension is mounted"
+                android:key="suspensionHeight"
+                android:defaultValue="2"
+                android:entries="@array/heightNames5"
+                android:entryValues="@array/suspensionVals" />
+            <ListPreference
+                android:title="Suspension Travel"
+                android:summary="How deep your suspension is"
+                android:key="suspensionLength"
+                android:defaultValue="2"
+                android:entries="@array/suspensionTravelNames"
+                android:entryValues="@array/base1vals3" />
+            <ListPreference
+                android:title="Suspension Stiffness"
+                android:summary="How hard your suspension is"
+                android:key="suspensionStiffness"
+                android:defaultValue="2"
+                android:entries="@array/suspensionStiffNames"
+                android:entryValues="@array/base1vals3" />
+            <ListPreference
+                android:title="Wheel Size"
+                android:summary="Pimp your Ride more"
+                android:key="wheelSize"
+                android:defaultValue="42"
+                android:entries="@array/sizeNames5"
+                android:entryValues="@array/wheelSizeVals" />
+        </PreferenceScreen>
+        <ListPreference
+            android:title="Simulation Minimum Frequency(hz)"
+            android:summary="go slomo rather than choppy when FPS below this"
+            android:key="fpsLowLimit"
+            android:defaultValue="30"
+            android:entries="@array/fpsNames"
+            android:entryValues="@array/fpsVals" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Secrets">
+        <EditTextPreference
+            android:name="Code"
+            android:summary="Secret Code"
+            android:title="A Code"
+            android:key="cheatsString" />
+    </PreferenceCategory>
+</PreferenceScreen>
